@@ -27,7 +27,8 @@ const TodosContext = React.createContext({
         text: "repeat",
         isCompleted: false
         },
-    ]
+    ],
+    currentTodo: {},
 });
 
 export default TodosContext;

@@ -25,7 +25,9 @@ function TodoList() {
                         >
                             <i className="fa fa-trash"></i>
                         </button>
-                        <button>
+                        <button
+                            onClick={() => dispatch({ type: "Set_Todo", payload: something})}
+                        >
                             <i className="fas fa-edit"></i>
                         </button>
                     </li>

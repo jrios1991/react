@@ -1,26 +1,33 @@
-import logo from './tek_logo.png';
-import './App.css';
+import React from 'react';
 import NavBar from './Components/NavBar';
 import Headlines from './Views/Headlines';
 import Sports from './Views/Sports';
-import Weather from './Views/Weather';
-import Politics from './Views/Politics';
+import Health from './Views/Health';
+import Technology from './Views/Technology';
 import Footer from './Components/Footer';
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="App container">
+      <header>
         <NavBar/>
-        <img src={logo} className="App-logo" alt="logo" />
         <div>
-         <br/>
-          <p>Create a News Site</p>
-          <p>Set up a Single Page Application (SPA) with react-router</p>
-          <Headlines/>
-          <Sports/>
-          <Weather/>
-          <Politics/>
+        <br/>
+          <Switch>
+            <Route path="/sports">
+              <Sports/> 
+            </Route>
+            <Route path="/health">
+              <Health/>
+            </Route>
+            <Route path="/technology">
+              <Technology/>
+            </Route>
+            <Route path="/">
+              <Headlines/>
+            </Route>
+          </Switch>
         </div>
       </header>
       <Footer/>
